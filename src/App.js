@@ -6,10 +6,15 @@ import "./App.css";
 class App extends Component {
   state = {
     counters: [
-      { id: 1, value: 0 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
-      { id: 4, value: 0 }
+      {
+        id: 1,
+        energy: 0,
+        addedEnergy: 6,
+        name: "Adelholzener Apfelschorle 0,5 l"
+      },
+      { id: 2, energy: 0, addedEnergy: 6, name: "Bio Milch 0,25 l" },
+      { id: 3, energy: 0, addedEnergy: 3, name: "Bio Schorle Apfel 0,2 l" },
+      { id: 4, energy: 0, addedEnergy: 0, name: "Café small" }
     ]
   };
 
@@ -17,13 +22,14 @@ class App extends Component {
     const counters = [...this.state.counters];
     const index = counters.indexOf(item);
     counters[index] = { ...item };
-    counters[index].value++;
+    counters[index].energy =
+      counters[index].energy + counters[index].addedEnergy;
     this.setState({ counters });
   };
 
   handleReset = () => {
     const counters = this.state.counters.map(c => {
-      c.value = 0;
+      c.energy = 0;
       return c;
     });
     this.setState({ counters });
@@ -33,8 +39,9 @@ class App extends Component {
     const counters = [...this.state.counters];
     const index = counters.indexOf(item);
     counters[index] = { ...item };
-    if (counters[index].value > 0) {
-      counters[index].value--;
+    if (counters[index].energy > 0) {
+      counters[index].energy =
+        counters[index].energy - counters[index].addedEnergy;
     }
     this.setState({ counters });
   };
@@ -51,11 +58,13 @@ class App extends Component {
     return (
       <React.Fragment>
         <Summary
-          totalEnergy={this.state.counters.reduce(
-            (total, counters) => total + counters.value,
-            0
-          )}
-          totalOther={this.state.counters.filter(c => c.value).length}
+          totalEnergy={
+            this.state.counters.reduce(
+              (total, counters) => total + counters.energy,
+              0
+            ) + "%"
+          }
+          totalOther={this.state.counters.filter(c => c.energy).length}
         />
         <div>
           <h4>Legend:</h4>
