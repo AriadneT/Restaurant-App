@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Summary from "./components/summary";
 import Counters from "./components/counters";
+import Legend from "./components/legend";
 import "./App.css";
 
 class App extends Component {
@@ -8,13 +9,50 @@ class App extends Component {
     counters: [
       {
         id: 1,
+        amount: 0,
         energy: 0,
         addedEnergy: 6,
+        fat: 0,
+        addedFat: 0,
+        saturatedFat: 0,
+        addedSaturatedFat: 0,
+        carbohydrate: 0,
+        addedCarbohydrate: 12,
+        sugar: 0,
+        addedSugar: 32,
+        protein: 0,
+        addedProtein: 0,
+        salt: 0,
+        addedSalt: 1,
         name: "Adelholzener Apfelschorle 0,5 l"
       },
-      { id: 2, energy: 0, addedEnergy: 6, name: "Bio Milch 0,25 l" },
-      { id: 3, energy: 0, addedEnergy: 3, name: "Bio Schorle Apfel 0,2 l" },
-      { id: 4, energy: 0, addedEnergy: 0, name: "Café small" }
+      {
+        id: 2,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 6,
+        fat: 0,
+        addedFat: 7,
+        saturatedFat: 0,
+        addedSaturatedFat: 13,
+        carbohydrate: 0,
+        addedCarbohydrate: 5,
+        sugar: 0,
+        addedSugar: 14,
+        protein: 0,
+        addedProtein: 18,
+        salt: 0,
+        addedSalt: 6,
+        name: "Bio Milch 0,25 l"
+      },
+      {
+        id: 3,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 3,
+        name: "Bio Schorle Apfel 0,2 l"
+      },
+      { id: 4, amount: 0, energy: 0, addedEnergy: 0, name: "Café small" }
     ]
   };
 
@@ -24,11 +62,13 @@ class App extends Component {
     counters[index] = { ...item };
     counters[index].energy =
       counters[index].energy + counters[index].addedEnergy;
+    counters[index].amount++;
     this.setState({ counters });
   };
 
   handleReset = () => {
     const counters = this.state.counters.map(c => {
+      c.amount = 0;
       c.energy = 0;
       return c;
     });
@@ -39,9 +79,10 @@ class App extends Component {
     const counters = [...this.state.counters];
     const index = counters.indexOf(item);
     counters[index] = { ...item };
-    if (counters[index].energy > 0) {
+    if (counters[index].amount > 0) {
       counters[index].energy =
         counters[index].energy - counters[index].addedEnergy;
+      counters[index].amount--;
     }
     this.setState({ counters });
   };
@@ -66,20 +107,8 @@ class App extends Component {
           }
           totalOther={this.state.counters.filter(c => c.energy).length}
         />
-        <div>
-          <h4>Legend:</h4>
-          <p>
-            <span className="badge-warning">
-              Over 33% of recommended daily intake.
-            </span>
-          </p>
-          <p>
-            <span className="badge-danger">
-              Over 100% of recommended daily intake.
-            </span>
-          </p>
-        </div>
         <main className="container">
+          <Legend />
           <Counters
             counters={this.state.counters}
             onReset={this.handleReset}

@@ -5,7 +5,6 @@ class Item extends Component {
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-        <span>{this.props.item.name}</span>
         <button
           onClick={() => this.props.onIncrement(this.props.item)}
           className="btn btn-secondary btn-sm"
@@ -18,19 +17,20 @@ class Item extends Component {
         >
           Delete
         </button>
+        <span>{this.props.item.name}</span>
       </div>
     );
   }
 
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
-    classes += this.props.item.energy === 0 ? "warning" : "primary"; // or this.state.count?
+    classes += this.props.item.amount === 0 ? "secondary" : "primary";
     return classes;
   }
 
   formatCount() {
-    const { energy } = this.props.item;
-    return energy === 0 ? "Zero" : energy + "%";
+    const { amount } = this.props.item;
+    return amount === 0 ? "Zero" : amount;
   }
 }
 

@@ -7,8 +7,7 @@ class Summary extends Component {
     return (
       <div className="navbar navbar-light bg-light">
         <span className="navbar-brand">
-          Energy{" "}
-          <span className="bad badge-pill badge-secondary">{totalEnergy}</span>
+          Energy <span className={this.getEnergyClasses()}>{totalEnergy}</span>
         </span>
         <span className="navbar-brand">
           Fat <span className="bad badge-pill badge-secondary">0</span>
@@ -32,6 +31,22 @@ class Summary extends Component {
         </span>
       </div>
     );
+  }
+
+  getEnergyClasses() {
+    let classes = "bad badge-pill badge-";
+    let totalEnergy = this.props.totalEnergy.substring(
+      0,
+      this.props.totalEnergy.indexOf("%")
+    );
+    if (totalEnergy < 34) {
+      classes += "secondary";
+    } else if (totalEnergy < 100) {
+      classes += "warning";
+    } else {
+      classes += "danger";
+    }
+    return classes;
   }
 }
 
