@@ -30,7 +30,7 @@ class Item extends Component {
 
   formatCount() {
     const { amount } = this.props.item;
-    return amount === 0 ? "Zero" : amount;
+    return amount;
   }
 }
 

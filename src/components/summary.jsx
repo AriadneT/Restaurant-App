@@ -2,7 +2,15 @@ import React, { Component } from "react";
 
 class Summary extends Component {
   render() {
-    const { totalEnergy } = this.props;
+    const {
+      totalEnergy,
+      totalFat,
+      totalSaturatedFat,
+      totalCarbohydrate,
+      totalSugar,
+      totalProtein,
+      totalSalt
+    } = this.props;
 
     return (
       <div className="navbar navbar-light bg-light">
@@ -10,24 +18,31 @@ class Summary extends Component {
           Energy <span className={this.getEnergyClasses()}>{totalEnergy}</span>
         </span>
         <span className="navbar-brand">
-          Fat <span className="bad badge-pill badge-secondary">0</span>
+          Fat <span className="bad badge-pill badge-secondary">{totalFat}</span>
         </span>
         <span className="navbar-brand">
           Saturated fat{" "}
-          <span className="bad badge-pill badge-secondary">0</span>
+          <span className="bad badge-pill badge-secondary">
+            {totalSaturatedFat}
+          </span>
         </span>
         <span className="navbar-brand">
           Carbohydrates{" "}
-          <span className="bad badge-pill badge-secondary">0</span>
+          <span className="bad badge-pill badge-secondary">
+            {totalCarbohydrate}
+          </span>
         </span>
         <span className="navbar-brand">
-          Sugar <span className="bad badge-pill badge-secondary">0</span>
+          Sugar{" "}
+          <span className="bad badge-pill badge-secondary">{totalSugar}</span>
         </span>
         <span className="navbar-brand">
-          Protein <span className="bad badge-pill badge-secondary">0</span>
+          Protein{" "}
+          <span className="bad badge-pill badge-secondary">{totalProtein}</span>
         </span>
         <span className="navbar-brand">
-          Salt <span className="bad badge-pill badge-secondary">0</span>
+          Salt{" "}
+          <span className="bad badge-pill badge-secondary">{totalSalt}</span>
         </span>
       </div>
     );
