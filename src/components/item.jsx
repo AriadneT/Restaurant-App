@@ -4,7 +4,7 @@ class Item extends Component {
   render() {
     return (
       <div>
-        <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
+        <span className={this.getBadgeClasses()}>{this.props.item.amount}</span>
         <button
           onClick={() => this.props.onIncrement(this.props.item)}
           className="btn btn-secondary btn-sm"
@@ -26,11 +26,6 @@ class Item extends Component {
     let classes = "badge m-2 badge-";
     classes += this.props.item.amount === 0 ? "secondary" : "primary";
     return classes;
-  }
-
-  formatCount() {
-    const { amount } = this.props.item;
-    return amount;
   }
 }
 
