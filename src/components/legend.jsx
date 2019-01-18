@@ -3,15 +3,15 @@ import React, { Component } from "react";
 const Legend = () => {
   return (
     <div>
-      <h4>Legend:</h4>
+      <h4>Erklärungen:</h4>
       <p>
-        <span className="badge-warning">
-          Over 33% of recommended daily intake
+        <span className="bad badge-pill badge-warning">
+          Mehr als 33% der empfohlenen täglichen Einnahme
         </span>
       </p>
       <p>
-        <span className="badge-danger">
-          Over 100% of recommended daily intake
+        <span className="bad badge-pill badge-danger">
+          Mehr als 100% der empfohlenen täglichen Einnahme
         </span>
       </p>
     </div>

@@ -15,33 +15,33 @@ class Summary extends Component {
     return (
       <div className="navbar navbar-light bg-light">
         <span className="navbar-brand">
-          Energy{" "}
+          Energie{" "}
           <span className={this.getClasses("energy")}>{totalEnergy}</span>
         </span>
         <span className="navbar-brand">
-          Fat <span className={this.getClasses("fat")}>{totalFat}</span>
+          Fett <span className={this.getClasses("fat")}>{totalFat}</span>
         </span>
         <span className="navbar-brand">
-          Saturated fat{" "}
+          Gesättige Fettsäuren{" "}
           <span className={this.getClasses("saturated fat")}>
             {totalSaturatedFat}
           </span>
         </span>
         <span className="navbar-brand">
-          Carbohydrates{" "}
+          Kohlenhydrate{" "}
           <span className={this.getClasses("carbohydrates")}>
             {totalCarbohydrate}
           </span>
         </span>
         <span className="navbar-brand">
-          Sugar <span className={this.getClasses("sugar")}>{totalSugar}</span>
+          Zucker <span className={this.getClasses("sugar")}>{totalSugar}</span>
         </span>
         <span className="navbar-brand">
-          Protein{" "}
+          Eiweiss{" "}
           <span className={this.getClasses("protein")}>{totalProtein}</span>
         </span>
         <span className="navbar-brand">
-          Salt <span className={this.getClasses("salt")}>{totalSalt}</span>
+          Salz <span className={this.getClasses("salt")}>{totalSalt}</span>
         </span>
       </div>
     );
