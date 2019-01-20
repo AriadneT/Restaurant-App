@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Item extends Component {
   render() {
     return (
-      <div>
+      <div style={{ display: this.props.item.display ? "block" : "none" }}>
         <span className={this.getBadgeClasses()}>{this.props.item.amount}</span>
         <button
           onClick={() => this.props.onIncrement(this.props.item)}

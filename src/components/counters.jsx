@@ -3,10 +3,21 @@ import Item from "./item";
 
 class Counters extends Component {
   render() {
-    const { onReset, counters, onDelete, onIncrement } = this.props;
+    const {
+      onReset,
+      counters,
+      onDelete,
+      onIncrement,
+      onFood,
+      onDrink
+    } = this.props;
 
     return (
       <div>
+        <p>
+          <button onClick={onDrink}>Getränke</button>
+          <button onClick={onFood}>Essen</button>
+        </p>
         <button onClick={onReset} className="btn btn-primary btn-small m2">
           Zurücksetzen
         </button>

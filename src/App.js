@@ -24,6 +24,8 @@ class App extends Component {
         addedProtein: 0,
         salt: 0,
         addedSalt: 1,
+        type: "drink",
+        display: true,
         name: "Adelholzener Apfelschorle 0,5 l"
       },
       {
@@ -43,6 +45,8 @@ class App extends Component {
         addedProtein: 18,
         salt: 0,
         addedSalt: 6,
+        type: "drink",
+        display: true,
         name: "Bio Milch 0,25 l"
       },
       {
@@ -62,6 +66,8 @@ class App extends Component {
         addedProtein: 0,
         salt: 0,
         addedSalt: 0,
+        type: "drink",
+        display: true,
         name: "Bio Schorle Apfel 0,2 l"
       },
       {
@@ -81,6 +87,8 @@ class App extends Component {
         addedProtein: 0,
         salt: 0,
         addedSalt: 0,
+        type: "drink",
+        display: true,
         name: "Café small"
       },
       {
@@ -100,6 +108,8 @@ class App extends Component {
         addedProtein: 0,
         salt: 0,
         addedSalt: 0,
+        type: "drink",
+        display: true,
         name: "Café regular"
       },
       {
@@ -119,6 +129,8 @@ class App extends Component {
         addedProtein: 0,
         salt: 0,
         addedSalt: 0,
+        type: "drink",
+        display: true,
         name: "Café grande"
       },
       {
@@ -138,6 +150,8 @@ class App extends Component {
         addedProtein: 6,
         salt: 0,
         addedSalt: 2,
+        type: "drink",
+        display: true,
         name: "Cappuccino small"
       },
       {
@@ -157,6 +171,8 @@ class App extends Component {
         addedProtein: 9,
         salt: 0,
         addedSalt: 3,
+        type: "drink",
+        display: true,
         name: "Cappuccino regular"
       },
       {
@@ -176,6 +192,8 @@ class App extends Component {
         addedProtein: 13,
         salt: 0,
         addedSalt: 4,
+        type: "drink",
+        display: true,
         name: "Cappuccino grande"
       },
       {
@@ -195,6 +213,8 @@ class App extends Component {
         addedProtein: 0,
         salt: 0,
         addedSalt: 0,
+        type: "drink",
+        display: true,
         name: "Capri-Sun Pure Tropical 0,2l"
       },
       {
@@ -214,6 +234,8 @@ class App extends Component {
         addedProtein: 0,
         salt: 0,
         addedSalt: 0,
+        type: "drink",
+        display: true,
         name: "Coca-Cola Classic 0,25l"
       }
     ]
@@ -265,6 +287,32 @@ class App extends Component {
       counters[index].salt = counters[index].salt - counters[index].addedSalt;
       counters[index].amount--;
     }
+    this.setState({ counters });
+  };
+
+  getFood = () => {
+    const counters = this.state.counters.map(c => {
+      console.log(c.type);
+      if (c.type === "food") {
+        c.display = true;
+      } else {
+        c.display = false;
+      }
+      return c;
+    });
+    this.setState({ counters });
+  };
+
+  getDrinks = () => {
+    const counters = this.state.counters.map(c => {
+      console.log(c.type);
+      if (c.type === "drink") {
+        c.display = true;
+      } else {
+        c.display = false;
+      }
+      return c;
+    });
     this.setState({ counters });
   };
 
@@ -322,6 +370,8 @@ class App extends Component {
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
+            onFood={this.getFood}
+            onDrink={this.getDrinks}
           />
         </main>
       </React.Fragment>
