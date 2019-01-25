@@ -4,7 +4,9 @@ class Item extends Component {
   render() {
     return (
       <div style={{ display: this.props.item.display ? "block" : "none" }}>
-        <span className={this.getBadgeClasses()}>{this.props.item.amount}</span>
+        <span id="amount" className={this.getBadgeClasses()}>
+          {this.props.item.amount}
+        </span>
         <button
           onClick={() => this.props.onIncrement(this.props.item)}
           className="btn btn-secondary btn-sm"
