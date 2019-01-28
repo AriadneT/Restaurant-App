@@ -848,6 +848,300 @@ class App extends Component {
         name: "Chicken McNuggets 6 Stück"
       },
       {
+        id: 41,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 20,
+        fat: 0,
+        addedFat: 29,
+        saturatedFat: 0,
+        addedSaturatedFat: 12,
+        carbohydrate: 0,
+        addedCarbohydrate: 11,
+        sugar: 0,
+        addedSugar: 1,
+        protein: 0,
+        addedProtein: 51,
+        salt: 0,
+        addedSalt: 32,
+        type: "food",
+        display: true,
+        name: "Chicken McNuggets 9 Stück"
+      },
+      {
+        id: 42,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 13,
+        fat: 0,
+        addedFat: 22,
+        saturatedFat: 0,
+        addedSaturatedFat: 21,
+        carbohydrate: 0,
+        addedCarbohydrate: 1,
+        sugar: 0,
+        addedSugar: 0,
+        protein: 0,
+        addedProtein: 49,
+        salt: 0,
+        addedSalt: 37,
+        type: "food",
+        display: true,
+        name: "Chicken Wings 5 Stück"
+      },
+      {
+        id: 43,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 16,
+        fat: 0,
+        addedFat: 15,
+        saturatedFat: 0,
+        addedSaturatedFat: 8,
+        carbohydrate: 0,
+        addedCarbohydrate: 17,
+        sugar: 0,
+        addedSugar: 12,
+        protein: 0,
+        addedProtein: 23,
+        salt: 0,
+        addedSalt: 26,
+        type: "food",
+        display: true,
+        name: "Chickenburger"
+      },
+      {
+        id: 44,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 22,
+        fat: 0,
+        addedFat: 33,
+        saturatedFat: 0,
+        addedSaturatedFat: 58,
+        carbohydrate: 0,
+        addedCarbohydrate: 12,
+        sugar: 0,
+        addedSugar: 8,
+        protein: 0,
+        addedProtein: 53,
+        salt: 0,
+        addedSalt: 41,
+        type: "food",
+        display: true,
+        name: "Doppel-Cheeseburger"
+      },
+      {
+        id: 45,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 28,
+        fat: 0,
+        addedFat: 43,
+        saturatedFat: 0,
+        addedSaturatedFat: 19,
+        carbohydrate: 0,
+        addedCarbohydrate: 19,
+        sugar: 0,
+        addedSugar: 10,
+        protein: 0,
+        addedProtein: 38,
+        salt: 0,
+        addedSalt: 38,
+        type: "food",
+        display: true,
+        name: "Doppel-Cheeseburger Honig-Senf"
+      },
+      {
+        id: 46,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 17,
+        fat: 0,
+        addedFat: 19,
+        saturatedFat: 0,
+        addedSaturatedFat: 13,
+        carbohydrate: 0,
+        addedCarbohydrate: 14,
+        sugar: 0,
+        addedSugar: 5,
+        protein: 0,
+        addedProtein: 31,
+        salt: 0,
+        addedSalt: 24,
+        type: "food",
+        display: true,
+        name: "Filet-o-Fish"
+      },
+      {
+        id: 47,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 13,
+        fat: 0,
+        addedFat: 12,
+        saturatedFat: 0,
+        addedSaturatedFat: 17,
+        carbohydrate: 0,
+        addedCarbohydrate: 12,
+        sugar: 0,
+        addedSugar: 7,
+        protein: 0,
+        addedProtein: 26,
+        salt: 0,
+        addedSalt: 20,
+        type: "food",
+        display: true,
+        name: "Hamburger"
+      },
+      {
+        id: 48,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 26,
+        fat: 0,
+        addedFat: 39,
+        saturatedFat: 0,
+        addedSaturatedFat: 68,
+        carbohydrate: 0,
+        addedCarbohydrate: 14,
+        sugar: 0,
+        addedSugar: 11,
+        protein: 0,
+        addedProtein: 63,
+        salt: 0,
+        addedSalt: 43,
+        type: "food",
+        display: true,
+        name: "Hamburger Royal Käse"
+      },
+      {
+        id: 49,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 26,
+        fat: 0,
+        addedFat: 40,
+        saturatedFat: 0,
+        addedSaturatedFat: 58,
+        carbohydrate: 0,
+        addedCarbohydrate: 13,
+        sugar: 0,
+        addedSugar: 9,
+        protein: 0,
+        addedProtein: 59,
+        salt: 0,
+        addedSalt: 31,
+        type: "food",
+        display: true,
+        name: "Hamburger Royal TS"
+      },
+      {
+        id: 50,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 22,
+        fat: 0,
+        addedFat: 27,
+        saturatedFat: 0,
+        addedSaturatedFat: 18,
+        carbohydrate: 0,
+        addedCarbohydrate: 18,
+        sugar: 0,
+        addedSugar: 5,
+        protein: 0,
+        addedProtein: 39,
+        salt: 0,
+        addedSalt: 38,
+        type: "food",
+        display: true,
+        name: "McChicken Classic"
+      },
+      {
+        id: 51,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 21,
+        fat: 0,
+        addedFat: 31,
+        saturatedFat: 0,
+        addedSaturatedFat: 54,
+        carbohydrate: 0,
+        addedCarbohydrate: 11,
+        sugar: 0,
+        addedSugar: 6,
+        protein: 0,
+        addedProtein: 51,
+        salt: 0,
+        addedSalt: 34,
+        type: "food",
+        display: true,
+        name: "McDouble Chilli Cheese"
+      },
+      {
+        id: 52,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 24,
+        fat: 0,
+        addedFat: 31,
+        saturatedFat: 0,
+        addedSaturatedFat: 43,
+        carbohydrate: 0,
+        addedCarbohydrate: 17,
+        sugar: 0,
+        addedSugar: 13,
+        protein: 0,
+        addedProtein: 50,
+        salt: 0,
+        addedSalt: 51,
+        type: "food",
+        display: true,
+        name: "McRib"
+      },
+      {
+        id: 53,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 32,
+        fat: 0,
+        addedFat: 47,
+        saturatedFat: 0,
+        addedSaturatedFat: 40,
+        carbohydrate: 0,
+        addedCarbohydrate: 21,
+        sugar: 0,
+        addedSugar: 7,
+        protein: 0,
+        addedProtein: 58,
+        salt: 0,
+        addedSalt: 37,
+        type: "food",
+        display: true,
+        name: "McWrap Chicken Caesar"
+      },
+      {
+        id: 54,
+        amount: 0,
+        energy: 0,
+        addedEnergy: 12,
+        fat: 0,
+        addedFat: 16,
+        saturatedFat: 0,
+        addedSaturatedFat: 5,
+        carbohydrate: 0,
+        addedCarbohydrate: 11,
+        sugar: 0,
+        addedSugar: 0,
+        protein: 0,
+        addedProtein: 6,
+        salt: 0,
+        addedSalt: 6,
+        type: "food",
+        display: true,
+        name: "Pommes frites klein"
+      },
+      {
         id: 100,
         amount: 0,
         energy: 0,
@@ -920,36 +1214,9 @@ class App extends Component {
     this.setState({ counters });
   };
 
-  getFood = () => {
+  getGroup = group => {
     const counters = this.state.counters.map(c => {
-      console.log(c.type);
-      if (c.type === "food") {
-        c.display = true;
-      } else {
-        c.display = false;
-      }
-      return c;
-    });
-    this.setState({ counters });
-  };
-
-  getDrinks = () => {
-    const counters = this.state.counters.map(c => {
-      console.log(c.type);
-      if (c.type === "drink") {
-        c.display = true;
-      } else {
-        c.display = false;
-      }
-      return c;
-    });
-    this.setState({ counters });
-  };
-
-  getExtras = () => {
-    const counters = this.state.counters.map(c => {
-      console.log(c.type);
-      if (c.type === "extra") {
+      if (c.type === group) {
         c.display = true;
       } else {
         c.display = false;
@@ -1013,9 +1280,7 @@ class App extends Component {
             onReset={this.handleReset}
             onIncrement={this.handleIncrement}
             onDelete={this.handleDelete}
-            onFood={this.getFood}
-            onDrink={this.getDrinks}
-            onExtras={this.getExtras}
+            onGroup={this.getGroup}
           />
         </main>
       </React.Fragment>

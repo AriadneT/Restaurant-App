@@ -3,30 +3,41 @@ import Item from "./item";
 
 class Counters extends Component {
   render() {
-    const {
-      onReset,
-      counters,
-      onDelete,
-      onIncrement,
-      onFood,
-      onDrink,
-      onExtras
-    } = this.props;
+    const { onReset, counters, onDelete, onIncrement, onGroup } = this.props;
 
     return (
       <div>
         <div className="btn-group">
-          <button onClick={onFood} className="btn btn-danger btn-small">
+          <button
+            onClick={() => onGroup("food")}
+            className="btn btn-danger btn-small"
+          >
             Essen
           </button>
-          <button className="btn btn-light btn-small">Frühstück</button>
-          <button onClick={onExtras} className="btn btn-danger btn-small">
+          <button
+            onClick={() => onGroup("breakfast")}
+            className="btn btn-light btn-small"
+          >
+            Frühstück
+          </button>
+          <button
+            onClick={() => onGroup("extra")}
+            className="btn btn-danger btn-small"
+          >
             Extras
           </button>
-          <button onClick={onDrink} className="btn btn-light btn-small">
+          <button
+            onClick={() => onGroup("drink")}
+            className="btn btn-light btn-small"
+          >
             Getränke
           </button>
-          <button className="btn btn-danger btn-small">Dessert</button>
+          <button
+            onClick={() => onGroup("dessert")}
+            className="btn btn-danger btn-small"
+          >
+            Dessert
+          </button>
         </div>
         <p />
         <p>
