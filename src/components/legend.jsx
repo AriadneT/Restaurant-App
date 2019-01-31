@@ -4,13 +4,11 @@ const Legend = () => {
   return (
     <div>
       <h4>Erklärungen:</h4>
-      <p>
-        <span className="bad badge-pill badge-warning">
+      <p className="row">
+        <span className="bad badge-pill badge-warning col-md-6">
           Mehr als 33% der empfohlenen täglichen Einnahme für 1 Person
         </span>
-      </p>
-      <p>
-        <span className="bad badge-pill badge-danger">
+        <span className="bad badge-pill badge-danger col-md-6">
           Mehr als 100% der empfohlenen täglichen Einnahme für 1 Person
         </span>
       </p>
