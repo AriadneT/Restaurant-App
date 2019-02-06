@@ -7,7 +7,7 @@ class Counters extends Component {
 
     return (
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-4">
           <div className="btn-group">
             <button
               onClick={() => onGroup("food")}
@@ -49,7 +49,7 @@ class Counters extends Component {
             </button>
           </p>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-8">
           {counters.map(item => (
             <Item
               key={item.id}

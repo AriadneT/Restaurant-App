@@ -19,7 +19,9 @@ class Item extends Component {
         >
           Entfernen
         </button>
-        <span>{this.props.item.name}</span>
+        <span className={this.getBackgroundColour()}>
+          {this.props.item.name}
+        </span>
       </div>
     );
   }
@@ -28,6 +30,32 @@ class Item extends Component {
     let classes = "badge m-2 badge-";
     classes += this.props.item.amount === 0 ? "secondary" : "primary";
     return classes;
+  }
+
+  getBackgroundColour() {
+    let backgroundIndicator = "alert m-2 alert-";
+    if (
+      this.props.item.addedEnergy > 100 ||
+      this.props.item.addedFat > 100 ||
+      this.props.item.addedSaturatedFat > 100 ||
+      this.props.item.addedCarbohydrate > 100 ||
+      this.props.item.addedSugar > 100 ||
+      this.props.item.addedProtein > 100 ||
+      this.props.item.addedSalt > 100
+    ) {
+      backgroundIndicator += "danger";
+    } else if (
+      this.props.item.addedEnergy > 33.3 ||
+      this.props.item.addedFat > 33.3 ||
+      this.props.item.addedSaturatedFat > 33.3 ||
+      this.props.item.addedCarbohydrate > 33.3 ||
+      this.props.item.addedSugar > 33.3 ||
+      this.props.item.addedProtein > 33.3 ||
+      this.props.item.addedSalt > 33.3
+    ) {
+      backgroundIndicator += "warning";
+    }
+    return backgroundIndicator;
   }
 }
 
